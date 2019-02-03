@@ -9,6 +9,25 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
+    
+    
+    
+    
+    //  Outlet created to hold top label
+    
+    @IBOutlet weak var titleLzbel: UILabel!
+    
+    //  Decription label located underneath title
+    
+    @IBOutlet weak var synopsisLabel: UILabel!
+    
+    //  Poster image in cell
+    
+    @IBOutlet weak var posterView: UIImageView!
+    
+    
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AlamofireImage
+
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
@@ -26,7 +28,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
 
         // Do any additional setup after loading the view.
-        print("THIS VIEW HAS BEEN LOADED FOR THE END OF TIME")
+      //  print("THIS VIEW HAS BEEN LOADED FOR THE END OF //TIME")
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -58,13 +60,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell")  as! MovieCell
         
         let movie = movies[indexPath.row]
-        
         let title = movie["title"] as! String
+        let synopsis = movie["overview"] as! String
+        
+        cell.titleLzbel.text = title
+        cell.synopsisLabel.text = synopsis
 
-        cell.textLabel!.text = title
+        cell.titleLzbel.text = title
+        
+        let baseUrl = "http://image.tmdb.org/t/p/w185"
+        let posterpath = movie["poster_path"] as! String
+        let posterUrl = URL(string: baseUrl + posterpath)
+        
+        cell.posterView.af_setImage(withURL: posterUrl!)
+        
+         
+        
+        
         
         return cell
     }
