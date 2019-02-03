@@ -20,7 +20,7 @@ Flixter is an app that allows users to browse movies from the [The Movie Databas
 
 # On my iPhone: 
 
-<img src="https://i.imgur.com/NT65ldU.gif" width=250><br>
+<img src="https://i.imgur.com/eAVtFit.gif" width=250><br>
 
 ### Notes
 The most difficult part was having my Windows computer crash because of the Mac OSX Virtual Machine I was using. Fortunately 
