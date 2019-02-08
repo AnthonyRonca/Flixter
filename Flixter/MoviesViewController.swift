@@ -88,14 +88,85 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        print("Loading...")
+        
+        // determine which movie has been selected
+        
+        let cell = sender as! UITableViewCell  //
+        
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        
+        
+        // Pass the selected movie to the detailsViewController
+        
+        //segue parameter
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        
+        detailsViewController.movie = movie
+        
+//        let detailsViewController = segue.destination as! MoviesViewController
+//
+//        detailsViewController.movie = movie
+        
+        
     }
-    */
+    
 
 }
+
+
+
+/*
+ 
+    CodePath IOS Development Notes 2/7/19
+ 
+  - Navigation controller is the method for deciding where the app starts and how it moves throughout
+ 
+  - Cell Recycling refers to the method of re-using cells in otder to display a tableView. It is important to
+    understand that a scrolling app uses the same recycable cells rather than creating new memory for each item
+ 
+ - uses the syntax swqueueREsusableCell(withIdentifier:for:)
+ 
+ - Why use push navifation versus Modal, and Tab?
+        MODAL: When you transition to an unrelated screen (EX: Login, Registration)
+         PUSH: Where you're using a chain which you can either go foreward or back out of
+     Nav Tabs: Allows you to select using an icon on the tab bar
+ 
+ 
+ There is the ability for custom navigation from the developer
+ 
+ Collection View: Gives user a view of multiple items in a single bundle/screen
+ 
+    - is a GRID and can have many different layouts in that manner
+    - This is unnessecry but i need to re-push to github
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
