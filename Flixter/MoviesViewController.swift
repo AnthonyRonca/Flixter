@@ -10,6 +10,7 @@ import UIKit
 import AlamofireImage
 
 
+
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
 
@@ -26,6 +27,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.estimatedRowHeight = 280
 
         // Do any additional setup after loading the view.
       //  print("THIS VIEW HAS BEEN LOADED FOR THE END OF //TIME")
