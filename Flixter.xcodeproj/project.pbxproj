@@ -18,6 +18,8 @@
 		A2C898282203F6A8007511D3 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C898272203F6A8007511D3 /* MoviesViewController.swift */; };
 		A2C8982A22040500007511D3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8982922040500007511D3 /* MovieCell.swift */; };
 		B948DEC9F69F10E2B97A5175 /* Pods_FlixterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47300DF4A90489341C3ADFD9 /* Pods_FlixterTests.framework */; };
+		BD3E798722124A5B00EDD78E /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E798622124A5B00EDD78E /* MovieGridViewController.swift */; };
+		BD3E7989221257F300EDD78E /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E7988221257F300EDD78E /* MovieGridCell.swift */; };
 		BDD58501220D243C0059FE51 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD58500220D243C0059FE51 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		A2C8982922040500007511D3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		A6990CE2A03CAF34339C5826 /* Pods-FlixterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixterTests/Pods-FlixterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AACC406A943E81393578368D /* Pods_Flixter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flixter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3E798622124A5B00EDD78E /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		BD3E7988221257F300EDD78E /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
 		BDD58500220D243C0059FE51 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		F805CFFF484183094561A4D3 /* Pods-FlixterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlixterTests/Pods-FlixterTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF0082C63376F837D1E92017 /* Pods_FlixterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +123,6 @@
 		A2C897E32203EB96007511D3 = {
 			isa = PBXGroup;
 			children = (
-				A2C8982922040500007511D3 /* MovieCell.swift */,
 				A2C897EE2203EB96007511D3 /* Flixter */,
 				A2C898032203EB97007511D3 /* FlixterTests */,
 				A2C8980E2203EB97007511D3 /* FlixterUITests */,
@@ -142,6 +145,9 @@
 		A2C897EE2203EB96007511D3 /* Flixter */ = {
 			isa = PBXGroup;
 			children = (
+				A2C8982922040500007511D3 /* MovieCell.swift */,
+				BD3E798622124A5B00EDD78E /* MovieGridViewController.swift */,
+				BD3E7988221257F300EDD78E /* MovieGridCell.swift */,
 				A2C897EF2203EB96007511D3 /* AppDelegate.swift */,
 				A2C897F32203EB96007511D3 /* Main.storyboard */,
 				A2C897F62203EB97007511D3 /* Assets.xcassets */,
@@ -399,9 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3E798722124A5B00EDD78E /* MovieGridViewController.swift in Sources */,
 				BDD58501220D243C0059FE51 /* MovieDetailsViewController.swift in Sources */,
 				A2C897F02203EB96007511D3 /* AppDelegate.swift in Sources */,
 				A2C898282203F6A8007511D3 /* MoviesViewController.swift in Sources */,
+				BD3E7989221257F300EDD78E /* MovieGridCell.swift in Sources */,
 				A2C8982A22040500007511D3 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

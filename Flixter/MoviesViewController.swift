@@ -28,6 +28,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 280
+        
+        
 
         // Do any additional setup after loading the view.
       //  print("THIS VIEW HAS BEEN LOADED FOR THE END OF //TIME")
@@ -71,8 +73,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.titleLzbel.text = title
         cell.synopsisLabel.text = synopsis
-
-        cell.titleLzbel.text = title
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterpath = movie["poster_path"] as! String
@@ -117,6 +117,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let detailsViewController = segue.destination as! MovieDetailsViewController
         
         detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
 //        let detailsViewController = segue.destination as! MoviesViewController
 //
