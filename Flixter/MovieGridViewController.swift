@@ -26,6 +26,16 @@ class MovieGridViewController: UIViewController , UICollectionViewDataSource, UI
         CollectionView.delegate = self
         CollectionView.dataSource = self
         
+        let layout = CollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        
+        let width = ( view.frame.size.width - layout.minimumInteritemSpacing * 2 ) / 2
+        
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+        
+        
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         
@@ -81,7 +91,7 @@ class MovieGridViewController: UIViewController , UICollectionViewDataSource, UI
         
         let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
         
-        let indexPath = collectionView.indexPath(for: cell)!
+        //let indexPath = CollectionView.indexPath(for: cell)!
         
         let movie = movies[indexPath.item]
         
